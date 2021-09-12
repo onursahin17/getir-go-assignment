@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	RecordController "restful-api/Controller"
 	"restful-api/Infrastructure/Repository"
 )
@@ -23,5 +24,6 @@ func HandleRequests() {
 	http.HandleFunc("/filtered-records", RecordController.FilteredRecords)
 	http.HandleFunc("/in-memory", RecordController.GetValue)
 	http.HandleFunc("/in-memory/set", RecordController.SetValue)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), nil))
 }
