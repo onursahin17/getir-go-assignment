@@ -1,1 +1,1 @@
-web: bin/restful-api -p 8080
+web: bin/restful-api
