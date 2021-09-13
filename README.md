@@ -76,7 +76,7 @@ Sample request and response:
   Please provide the value”.
 - If the request structure is invalid; the response would be “Invalid request structure: ”, and then the request error.
 
-b) GET endpoint: https://getir-go.herokuapp.com/in-memory?key=<key-here>
+b) GET endpoint: https://getir-go.herokuapp.com/in-memory?key=(provide-key-here)
 
 - The request payload of GET endpoint includes 1 query parameter, which is the “key” parameter. The response returns the
   key and value.
